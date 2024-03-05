@@ -5,11 +5,11 @@ import {Alert, Col, Row} from "react-bootstrap"
 export const Newsletter = ({ onValidated, status, message }) => {
     const [email, setEmail] = useState('');
 
-    useInsertionEffect(() => {
+    useEffect(() => {
         if (status === 'success') clearFields();
     }, [status])
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         email &&
         email.indexOf("@") > -1 &&
