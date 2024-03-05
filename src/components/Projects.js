@@ -1,6 +1,8 @@
 import React from 'react'
 import { Container, TabContent, Col, Row, Tab, Nav } from 'react-bootstrap';
 import { ProjectCard } from "./ProjectCard";
+import 'animate.css'
+import TrackVisibility from 'react-on-screen';
 import projImg1 from '../assets/img/project-img1.png'
 import projImg2 from '../assets/img/project-img2.png'
 import projImg3 from '../assets/img/project-img3.png'
@@ -46,8 +48,13 @@ export const Projects = () => {
         <Container>
           <Row>
             <Col>
-              <h2>Projects</h2>
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+              <TrackVisibility>
+                {({ isVisible }) =>
+                  <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                    <h2>Projects</h2>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                  </div>}
+                </TrackVisibility>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center' id="pills-tab">
                   <Nav.Item>
