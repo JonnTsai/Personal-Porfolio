@@ -8,7 +8,7 @@ import TrackVisibility from 'react-on-screen';
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setisDeleting] = useState(false);
-    const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+    const toRotate = [ ", a Web Designer", ", a Mobile Developer", ", a Software Engineer" ];
     const [text, setText] = useState('')
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -51,8 +51,11 @@ export const Banner = () => {
                     {({ isVisible }) =>
                         <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                             <span className="tagline">Welcome to my Portfolio</span>
-                            <h1>{'Hi Im Jonathan '} <span className='wrap'>{text}</span></h1>
-                            <p>"Software Engineer WOOOOOOO."</p>
+                            <h1>{'Hi Im Jonathan'} <span className='wrap'>{text}</span></h1>
+                            <p>In 2017, I took a leap into the world of programming on YouTube, venturing into mobile app creation and immersing myself in the captivating realm of coding and software development. 
+Fast-forward to today, and I've had the privilege of building software for a national security site, a prominent virtual assistant, and a leading platform for video content creation and sharing, catering to millions of creators and viewers worldwide (oh how things come full circle).</p>
+<p>My main focus these days is building and finding unique solutions to incorporate AI tools into existing exosystems. I most enjoy building software that pushes the needle forward, for both the world of technology and my own professional growth.</p>
+<p>When I’m not at the computer, I’m usually playing basketball, board gaming, reading, or watching LeBron continue to prove why he's the greatest.</p>
                             <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
                         </div>}
                     </TrackVisibility>
