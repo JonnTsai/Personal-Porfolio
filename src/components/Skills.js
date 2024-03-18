@@ -39,22 +39,26 @@ export const Skills = () => {
                     <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                         <div className='item'>
                             <img src={meter1} alt="Image"/>
-                            <h5>Web development</h5>
+                            <h5>Google/YouTube</h5>
+                            <p>iOS Developer for YouTube Shorts</p>
                         </div>
                         <div className='item'>
                             <img src={meter2} alt="Image"/>
-                            <h5>brand identity</h5>
+                            <h5>Amazon</h5>
+                            <p>Java Developer for Amazon Alexa</p>
                         </div>
                         <div className='item'>
                             <img src={meter3} alt="Image"/>
-                            <h5>logo design</h5>
+                            <h5>MSTS</h5>
+                            <p>Android Mobile/Smart Watch Developer</p>
                         </div>
                         <div className='item'>
                             <img src={meter1} alt="Image"/>
-                            <h5>Web development</h5>
+                            <h5>UNLV-FIA</h5>
+                            <p>Accessibility Engineer</p>
                         </div>
                     </Carousel>
-                    <a href="..\assets\files\Jonathan_Tsai_Resume.pdf" target="_blank">View Full Résumé</a>
+                    <a href="/Jonathan_Tsai_Resume.pdf" target="_blank">View Full Résumé</a>
                 </div>
                 </Col>
             </Row>
