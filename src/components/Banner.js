@@ -4,6 +4,10 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from "../assets/img/header-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
+import {
+    BrowserRouter as Router
+} from "react-router-dom";
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -42,30 +46,33 @@ export const Banner = () => {
     })
 
   return (
-    
-    <section className = "banner" id = "home">
-        <Container>
-            <Row classNmae="align-items-center">
-                <Col xs={12} md={6} xl={7}>
-                    <TrackVisibility>
-                    {({ isVisible }) =>
-                        <div className={isVisible ? "animate__animated animate__bounce" : ""}>
-                            <span className="tagline">Welcome to my Portfolio</span>
-                            <h1>{'Hi Im Jonathan,'} <span className='wrap'>{text}</span></h1>
-                            <p>In 2017, I took a leap into the world of programming on YouTube, venturing into mobile app creation and immersing myself in the captivating realm of coding and software development. 
-Fast-forward to today, and I've had the privilege of building software for a <a href="https://nnss.gov/" target="_blank">national security site</a>, a <a href="https://alexa.amazon.com/" target="_blank">prominent virtual assistant</a>, and the <a href="https://www.youtube.com/" target="_blank">leading platform for video content creation and sharing</a>, catering to millions of creators and viewers worldwide (oh how things come full circle).</p>
-<p>My main focus these days is building and finding unique solutions to incorporate AI tools into existing ecosystems. I most enjoy building software that pushes the needle forward, for both the world of technology and my own professional growth.</p>
-<p>When I’m not at the computer, I’m usually playing basketball, board gaming, reading, or watching LeBron continue to prove why he's the <a href="https://www.youtube.com/watch?v=pUkFOU08z7U" target="_blank">greatest</a>.</p>
-                            <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
-                        </div>}
-                    </TrackVisibility>
-                </Col>
-                <Col xs={12} md={6} xl={5}>
-                    <img src={headerImg} alt='Header Img'/>
-                </Col>
-            </Row>
-        </Container>
-    </section>
+    <Router>
+        <section className = "banner" id = "home">
+            <Container>
+                <Row classNmae="align-items-center">
+                    <Col xs={12} md={6} xl={7}>
+                        <TrackVisibility>
+                        {({ isVisible }) =>
+                            <div className={isVisible ? "animate__animated animate__bounce" : ""}>
+                                <span className="tagline">Welcome to my Portfolio</span>
+                                <h1>{'Hi Im Jonathan,'} <span className='wrap'>{text}</span></h1>
+                                <p>In 2017, I took a leap into the world of programming on YouTube, venturing into mobile app creation and immersing myself in the captivating realm of coding and software development. 
+    Fast-forward to today, and I've had the privilege of building software for a <a href="https://nnss.gov/" target="_blank">national security site</a>, a <a href="https://alexa.amazon.com/" target="_blank">prominent virtual assistant</a>, and the <a href="https://www.youtube.com/" target="_blank">leading platform for video content creation and sharing</a>, catering to millions of creators and viewers worldwide (oh how things come full circle).</p>
+    <p>My main focus these days is building and finding unique solutions to incorporate AI tools into existing ecosystems. I most enjoy building software that pushes the needle forward, for both the world of technology and my own professional growth.</p>
+    <p>When I’m not at the computer, I’m usually playing basketball, board gaming, reading, or watching LeBron continue to prove why he's the <a href="https://www.youtube.com/watch?v=pUkFOU08z7U" target="_blank">greatest</a>.</p>
+                                <HashLink to='#connect'>
+                                    <button>Let's connect <ArrowRightCircle size={25}/></button>
+                                </HashLink>
+                            </div>}
+                        </TrackVisibility>
+                    </Col>
+                    <Col xs={12} md={6} xl={5}>
+                        <img src={headerImg} alt='Header Img'/>
+                    </Col>
+                </Row>
+            </Container>
+        </section>
+    </Router>
   )
 }
 
