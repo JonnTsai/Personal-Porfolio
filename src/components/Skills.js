@@ -2,7 +2,10 @@ import React from 'react'
 import { Container, Row , Col} from 'react-bootstrap';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg"
+import googleIcon from "../assets/img/google240.svg"
+import amazonIcon from "../assets/img/amazon240.svg"
+import unlvIcon from "../assets/img/unlv.png"
+import mstsIcon from "../assets/img/msts.jpg"
 import meter2 from "../assets/img/meter2.svg"
 import meter3 from "../assets/img/meter3.svg"
 import colorSharp from "../assets/img/color-sharp.png";
@@ -38,22 +41,22 @@ export const Skills = () => {
                     </h2>
                     <Carousel responsive={responsive} infinite={true} className='skill-slider'>
                         <div className='item'>
-                            <img src={meter1} alt="Image"/>
+                            <img src={googleIcon} alt="Image"/>
                             <h5>Google/YouTube</h5>
                             <p>iOS Developer for YouTube Shorts</p>
                         </div>
                         <div className='item'>
-                            <img src={meter2} alt="Image"/>
+                            <img src={amazonIcon} alt="Image"/>
                             <h5>Amazon</h5>
                             <p>Java Developer for Amazon Alexa</p>
                         </div>
                         <div className='item'>
-                            <img src={meter3} alt="Image"/>
-                            <h5>MSTS</h5>
-                            <p>Android Mobile/Smart Watch Developer</p>
+                            <img src={mstsIcon} alt="Image"/>
+                            <h5>NNSS</h5>
+                            <p>Android Mobile/Wear OS Developer</p>
                         </div>
                         <div className='item'>
-                            <img src={meter1} alt="Image"/>
+                            <img src={unlvIcon} alt="Image"/>
                             <h5>UNLV-FIA</h5>
                             <p>Accessibility Engineer</p>
                         </div>
